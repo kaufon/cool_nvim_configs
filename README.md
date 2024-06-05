@@ -19,12 +19,6 @@ $ brew install neovim
 $ brew install gcc
 ```
 
-## Install Make
-```bash
-$ sudo apt update && sudo apt install make -y
-```
-
-
 ## Install Ripgrep
 ```bash
 $ sudo apt update && sudo apt install ripgrep -y
