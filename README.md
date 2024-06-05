@@ -53,7 +53,8 @@ I put together this guide because, when I first started with NvChad, being a bit
 - Custom [LSP](https://github.com/williamboman/mason.nvim) for languages that i use
 > You can remove this in the [lua/custom/plugins.lua](https://github.com/kaufon/personal_nvim_configs/blob/main/lua/custom/plugins.lua) and [lua/custom/configs/lspconfig.lua](https://github.com/kaufon/personal_nvim_configs/blob/main/lua/custom/configs/lspconfig.lua) for LSP you do not want to use!
 
-
+# Why use NeoVim
+If you truly want to become a developer and escape the chains of the Soy based VSCode that the Microsoft heretics have been meddling in their basement together with the original sin,you will need a true IDE.So join now the NVIM cult to relish all the goods in the world and scare away the bugs
 <p align="center">
   Done with ❤️ by Kauan Fonseca 
 </p>
