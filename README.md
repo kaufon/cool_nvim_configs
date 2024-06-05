@@ -26,7 +26,7 @@ $ sudo apt update && sudo apt install ripgrep -y
 
 
 ### Change Your Terminal Font
-After installing the dependencies, you'll need to change your terminal font to a [Nerd Font](https://www.nerdfonts.com/), making sure it does not end with "Mono". Note that I faced several issues trying this in WSL due to conflicts with Windows user settings. Be aware that my solution might not work on your operating system, so proceed with caution.
+After installing the dependencies, you'll need to change your terminal font to a [Nerd Font](https://www.nerdfonts.com/), making sure it does <b>NOT</b> end with "Mono". Note that I faced several issues trying this in WSL due to conflicts with Windows user settings. Be aware that my solution might not work on your operating system, so proceed with caution.
 
 - To change your font:
 ```bash
