@@ -6,7 +6,11 @@ local lspconfig = require("lspconfig")
 local servers = {
   "clangd",
   "pyright",
-  "solargraph"
+  "solargraph",
+  "lua-language-server",
+  "html-lsp",
+  "htmx-lsp"
+
 }
 for _, server_name in ipairs(servers) do
   lspconfig[server_name].setup({

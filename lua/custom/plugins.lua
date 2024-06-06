@@ -13,7 +13,11 @@ local plugins = {
       ensure_installed = {
         "clangd",
         "pyright",
-        "solargraph"
+        "solargraph",
+        "lua-language-server",
+        "html-lsp",
+        "htmx-lsp"
+
       }
     }
   },
