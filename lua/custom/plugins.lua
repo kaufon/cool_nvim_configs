@@ -19,7 +19,8 @@ local plugins = {
      -- "html-lsp",
         "htmx-lsp",
         "docker-compose-language-service",
-        "dockerfile-language-server"
+        "dockerfile-language-server",
+        "tailwindcss-language-server"
       }
     }
   },
@@ -31,6 +32,24 @@ local plugins = {
 
     },
   },
+  {
+    "roobert/tailwindcss-colorizer-cmp.nvim",
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+    end
+  },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+    config = function ()
+      require("tailwind-tools").setup({
+      -- your configuration
+      })
+    end
+  }
 }
 
 return plugins
