@@ -12,7 +12,9 @@ local servers = {
   "html",
   "docker_compose_language_service", -- this one is just done by microsoft so it is REALLY shitty
   "dockerls",
-  "tailwindcss"
+  "tailwindcss",
+  "solang",
+  "solang-llvm"
   --"htmx" is a work in progress to see progress go to: https://github.com/ThePrimeagen/htmx-lsp  | maybe in near future will work!
 
 }

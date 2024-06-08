@@ -20,7 +20,9 @@ local plugins = {
         "htmx-lsp",
         "docker-compose-language-service",
         "dockerfile-language-server",
-        "tailwindcss-language-server"
+        "tailwindcss-language-server",
+        "solang",
+        "solang-llvm"
       }
     }
   },
