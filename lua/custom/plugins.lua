@@ -22,7 +22,6 @@ local plugins = {
         "dockerfile-language-server",
         "tailwindcss-language-server",
         "solang",
-        "solang-llvm"
       }
     }
   },

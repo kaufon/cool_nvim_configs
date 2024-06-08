@@ -14,7 +14,7 @@ local servers = {
   "dockerls",
   "tailwindcss",
   "solang",
-  "solang-llvm"
+--"solang-llvm"
   --"htmx" is a work in progress to see progress go to: https://github.com/ThePrimeagen/htmx-lsp  | maybe in near future will work!
 
 }
