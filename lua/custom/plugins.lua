@@ -34,7 +34,8 @@ local plugins = {
         "prettierd",
         "mypy",
         "pylint",
-        "black"
+        "black",
+        "solhint",
       }
     }
   },
