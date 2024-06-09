@@ -32,6 +32,9 @@ local plugins = {
         "typescript-language-server",
         "eslint-lsp",
         "prettierd",
+        "mypy",
+        "pylint",
+        "black"
       }
     }
   },
