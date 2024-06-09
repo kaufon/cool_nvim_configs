@@ -3,8 +3,8 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting",{})
 
 local opts = {
   source ={
-    null_ls.builtins.formatting.pretttierd,
-  }
+    null_ls.builtins.formatting.prettierd,
+  },
   on_attach = function (client,bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({
