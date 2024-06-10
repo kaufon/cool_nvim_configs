@@ -8,12 +8,14 @@ local opts = {
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.formatting.black, 
     null_ls.builtins.diagnostics.solhint,
+    null_ls.builtins.diagnostics.rubocop,
+    null_ls.builtins.formatting.rubocop,
   },
 
---  on_attach = function (client,bufnr)
-  --  if client.supports_method("textDocument/formatting") then
-    --  vim.api.nvim_clear_autocmds({
-      --  group = augroup,
+  --on_attach = function (client,bufnr)
+    --if client.supports_method("textDocument/formatting") then
+      --vim.api.nvim_clear_autocmds({
+        --group = augroup,
         --buffer = bufnr
       --})
       --vim.api.nvim_create_autocmd("BufWritePre",{
@@ -24,7 +26,7 @@ local opts = {
         --end,
       --})
     --end
- -- end
+  --end
 }
 
 return opts

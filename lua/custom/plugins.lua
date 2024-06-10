@@ -60,7 +60,7 @@ local plugins = {
         --mason package name goes here,for consult go to: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc%2Fserver-mapping.md
         "clangd",
         "pyright",
-        "solargraph",
+        "rubocop",
         "lua-language-server",
      -- "html-lsp",
         "htmx-lsp",
@@ -111,7 +111,7 @@ local plugins = {
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        "html"
+        "html",
       },
       config = function ()
         require ("nvim-ts-autotag").setup()
