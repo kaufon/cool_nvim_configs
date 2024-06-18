@@ -11,7 +11,15 @@ local plugins = {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      --help
+      lsp = {
+        signature = {
+          enabled = false,
+        },
+        hover = {
+          enabled = false,
+          }
+        }
+      
     },
     dependencies = {
       "MunifTanjim/nui.nvim",
