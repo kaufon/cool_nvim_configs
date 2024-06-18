@@ -8,7 +8,7 @@ local plugins = {
   },
   {
     "tpope/vim-fugitive",
-     cmd = "Git"
+     cmd = {"Git","G"},
   },
   {
     "tris203/precognition.nvim",
