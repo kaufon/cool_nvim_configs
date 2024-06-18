@@ -1,4 +1,5 @@
 local plugins = {
+
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -7,8 +8,19 @@ local plugins = {
     end,
   },
   {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      --help
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  },
+  {
     "tpope/vim-fugitive",
-     cmd = {"Git","G"},
+    cmd = { "Git", "G" },
   },
   {
     "tris203/precognition.nvim",
@@ -40,7 +52,7 @@ local plugins = {
   {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    event = "VeryLazy",
+    event = "BufEnter",
     opts = {
       disabled_keys = {
         ["<Up>"] = { "", },
