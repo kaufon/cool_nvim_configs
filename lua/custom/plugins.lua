@@ -1,55 +1,60 @@
 local plugins = {
   {
     "neovim/nvim-lspconfig",
-    config = function ()
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-      
     end,
+  },
+  {
+    "tpope/vim-fugitive",
+     cmd = "Git"
   },
   {
     "tris203/precognition.nvim",
     event = "VeryLazy",
     config = {
-    -- startVisible = true,
-    -- showBlankVirtLine = true,
-    -- highlightColor = { link = "Comment" },
-    -- hints = {
-    --      Caret = { text = "^", prio = 2 },
-    --      Dollar = { text = "$", prio = 1 },
-    --      MatchingPair = { text = "%", prio = 5 },
-    --      Zero = { text = "0", prio = 1 },
-    --      w = { text = "w", prio = 10 },
-    --      b = { text = "b", prio = 9 },
-    --      e = { text = "e", prio = 8 },
-    --      W = { text = "W", prio = 7 },
-    --      B = { text = "B", prio = 6 },
-    --      E = { text = "E", prio = 5 },
-    -- },
-    -- gutterHints = {
-    --     G = { text = "G", prio = 10 },
-    --     gg = { text = "gg", prio = 9 },
-    --     PrevParagraph = { text = "{", prio = 8 },
-    --     NextParagraph = { text = "}", prio = 8 },
-    -- },
+      -- startVisible = true,
+      -- showBlankVirtLine = true,
+      -- highlightColor = { link = "Comment" },
+      -- hints = {
+      --      Caret = { text = "^", prio = 2 },
+      --      Dollar = { text = "$", prio = 1 },
+      --      MatchingPair = { text = "%", prio = 5 },
+      --      Zero = { text = "0", prio = 1 },
+      --      w = { text = "w", prio = 10 },
+      --      b = { text = "b", prio = 9 },
+      --      e = { text = "e", prio = 8 },
+      --      W = { text = "W", prio = 7 },
+      --      B = { text = "B", prio = 6 },
+      --      E = { text = "E", prio = 5 },
+      -- },
+      -- gutterHints = {
+      --     G = { text = "G", prio = 10 },
+      --     gg = { text = "gg", prio = 9 },
+      --     PrevParagraph = { text = "{", prio = 8 },
+      --     NextParagraph = { text = "}", prio = 8 },
+      -- },
     },
   },
   {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     event = "VeryLazy",
-    opts ={disabled_keys = {
-      ["<Up>"] = { "", },
-      ["<Down>"] = { "", },
-      ["<Left>"] = { "", },
-      ["<Right>"] = { "", },
-   },},
-     
-   },
+    opts = {
+      disabled_keys = {
+        ["<Up>"] = { "", },
+        ["<Down>"] = { "", },
+        ["<Left>"] = { "", },
+        ["<Right>"] = { "", },
+      },
+    },
+
+  },
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
-    opts = function ()
+    opts = function()
       return require "custom.configs.null-ls"
     end,
   },
@@ -62,7 +67,7 @@ local plugins = {
         "pyright",
         "rubocop",
         "lua-language-server",
-     -- "html-lsp",
+        -- "html-lsp",
         "htmx-lsp",
         "docker-compose-language-service",
         "dockerfile-language-server",
@@ -81,7 +86,7 @@ local plugins = {
   {
     "okuuva/auto-save.nvim",
     cmd = "ASToggle",
-    event = {"InsertLeave","TextChanged"},
+    event = { "InsertLeave", "TextChanged" },
     opts = {
 
     },
@@ -98,24 +103,24 @@ local plugins = {
     "luckasRanarison/tailwind-tools.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
-    config = function ()
+    config = function()
       require("tailwind-tools").setup({
-      -- your configuration
+        -- your configuration
       })
     end
   },
   {
-     "windwp/nvim-ts-autotag",
-      ft = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "html",
-      },
-      config = function ()
-        require ("nvim-ts-autotag").setup()
-      end,
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
