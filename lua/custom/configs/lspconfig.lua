@@ -10,7 +10,6 @@ local servers = {
   "rubocop",
   "lua_ls",
   "html",
-  "docker_compose_language_service", -- this one is just done by microsoft so it is REALLY shitty
   "dockerls",
   "tailwindcss",
   "solang",

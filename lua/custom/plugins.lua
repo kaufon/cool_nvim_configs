@@ -125,7 +125,7 @@ local plugins = {
     opts = {},
     config = function()
       require("tailwind-tools").setup({
-        -- your configuration
+        --banana
       })
     end
   },
@@ -137,6 +137,9 @@ local plugins = {
       "typescript",
       "typescriptreact",
       "html",
+      "erb",
+      "eruby",
+      "embedded_template",
     },
     config = function()
       require("nvim-ts-autotag").setup()
@@ -151,6 +154,8 @@ local plugins = {
         "javascript",
         "typescript",
         "tsx",
+        "embedded_template",
+        "ruby",
       }
       return opts
     end
