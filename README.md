@@ -39,7 +39,7 @@ fc-cache -fv
 ## Step 2: Configure Neovim
 Once you've navigated through the dependency installation process, clone my Neovim configuration repository and open Neovim:
 ```bash
-git clone https://github.com/kaufon/personal_nvim_configs.git ~/.configs/nvim && nvim
+git clone https://github.com/kaufon/cool_nvim_configs.git ~/.configs/nvim && nvim
 ```
 > Enjoy !
 # Notice
