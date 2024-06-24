@@ -7,6 +7,11 @@ local plugins = {
     end,
   },
   {
+    event = "VeryLazy",
+    "David-Kunz/gen.nvim"
+  },
+
+  {
     "echasnovski/mini.ai",
     event = "VeryLazy",
     version = false,
@@ -84,8 +89,8 @@ local plugins = {
     }
   },
   {
+    event = "VeryLazy",
     "tpope/vim-fugitive",
-    cmd = { "Git", "G"}
   },
   {
     "tris203/precognition.nvim",
