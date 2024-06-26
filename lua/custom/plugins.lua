@@ -204,8 +204,8 @@ local plugins = {
         "javascript",
         "typescript",
         "tsx",
-        "ruby"
-        "embedded_template"
+        "ruby",
+        "embedded_template",
         "sql",
         "python",
       }
