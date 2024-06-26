@@ -1,11 +1,26 @@
 local plugins = {
-
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
+  },
+  {
+    event = "VeryLazy",
+    "David-Kunz/gen.nvim"
+  },
+  {
+    event = "VeryLazy",
+    "tpope/vim-rails",
+  },
+  {
+    "echasnovski/mini.ai",
+    event = "VeryLazy",
+    version = false,
+    config = function()
+      require('mini.ai').setup()
+    end
   },
   {
     'kristijanhusak/vim-dadbod-ui',
@@ -40,35 +55,35 @@ local plugins = {
           enabled = false,
         }
       },
-    views = {
-    cmdline_popup = {
-        position = {
-          row = 18,
-          col = "50%",
+      views = {
+        cmdline_popup = {
+          position = {
+            row = 18,
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = "auto",
+          },
         },
-        size = {
-          width = 60,
-          height = "auto",
-        },
-    },
-    popupmenu = {
-        relative = "editor",
-        position = {
-          row = 21,
-          col = "50%",
-        },
-        size = {
-          width = 60,
-          height = 10,
-        },
-        border = {
-          style = "rounded",
-          padding = { 0, 1 },
-        },
-        win_options = {
-          winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
-        },
-      }
+        popupmenu = {
+          relative = "editor",
+          position = {
+            row = 21,
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = 10,
+          },
+          border = {
+            style = "rounded",
+            padding = { 0, 1 },
+          },
+          win_options = {
+            winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+          },
+        }
       },
     },
     dependencies = {
@@ -77,8 +92,8 @@ local plugins = {
     }
   },
   {
+    event = "VeryLazy",
     "tpope/vim-fugitive",
-    cmd = { "Git", "G" },
   },
   {
     "tris203/precognition.nvim",
