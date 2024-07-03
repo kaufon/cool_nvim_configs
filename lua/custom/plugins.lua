@@ -48,10 +48,6 @@ local plugins = {
   },
   {
     event = "VeryLazy",
-    "David-Kunz/gen.nvim"
-  },
-  {
-    event = "VeryLazy",
     "tpope/vim-rails",
   },
   {
