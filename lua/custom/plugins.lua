@@ -7,6 +7,75 @@ local plugins = {
     end,
   },
   {
+    'echasnovski/mini.surround',
+    event = "VeryLazy",
+    version = false,
+    config = function ()
+      require("mini.surround").setup()
+      
+    end
+  },
+  {
+    "folke/trouble.nvim",
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+      {
+        "<leader>xX",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "Buffer Diagnostics (Trouble)",
+      },
+      {
+        "<leader>cs",
+        "<cmd>Trouble symbols toggle focus=false<cr>",
+        desc = "Symbols (Trouble)",
+      },
+      {
+        "<leader>cl",
+        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+        desc = "LSP Definitions / references / ... (Trouble)",
+      },
+      {
+        "<leader>xL",
+        "<cmd>Trouble loclist toggle<cr>",
+        desc = "Location List (Trouble)",
+      },
+      {
+        "<leader>xQ",
+        "<cmd>Trouble qflist toggle<cr>",
+        desc = "Quickfix List (Trouble)",
+      },
+    },
+  },
+  {
+    "NvChad/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({
+        user_default_options = {
+          tailwind = true
+        }
+      })
+    end
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true }
+    },
+    opts = function(_, opts)
+      local format_kinds = opts.formatting.format
+      opts.formatting.format = function(entry, item)
+        format_kinds(entry, item)
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+      end
+    end
+  },
+  {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
     config = function()
@@ -49,14 +118,6 @@ local plugins = {
   {
     event = "VeryLazy",
     "tpope/vim-rails",
-  },
-  {
-    "echasnovski/mini.ai",
-    event = "VeryLazy",
-    version = false,
-    config = function()
-      require('mini.ai').setup()
-    end
   },
   {
     'kristijanhusak/vim-dadbod-ui',
