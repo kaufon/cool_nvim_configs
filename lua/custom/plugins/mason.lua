@@ -18,7 +18,6 @@ local mason =
       "eslint-lsp",
       "prettierd",
       "mypy",
-      "pylint",
       "black",
       "solhint",
     }
