@@ -17,7 +17,7 @@ local mason =
       "typescript-language-server",
       "eslint-lsp",
       "prettierd",
-      "mypy",
+      "pylint",
       "black",
       "solhint",
     }
