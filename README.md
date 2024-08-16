@@ -39,14 +39,12 @@ fc-cache -fv
 ## Step 2: Configure Neovim
 Once you've navigated through the dependency installation process, clone my Neovim configuration repository and open Neovim:
 ```bash
-git clone https://github.com/kaufon/cool_nvim_configs.git ~/.configs/nvim && nvim
+git clone https://github.com/kaufon/cool_nvim_configs.git ~/.config/nvim && nvim
 ```
 > Enjoy !
 # Notice
 This setup is entirely based on [NvChad](https://nvchad.com/), with the primary distinction being the inclusion of my custom plugins.
 
-## So why i did this?
-I put together this guide because, when I first started with NvChad, being a bit of a dumbass i ran into all sorts of trouble trying to debug things that are not supossed to be debbuged. I figured there must be others out there feeling just as lost. So, this tutorial is for all the dumbasses like me, aiming to make the NVIM initiation process a little smoother. It's my way of reaching out to help you navigate through the early stages of joining the NVIM cult.I hope you'll soon be recommending NVIM to your fellow devs, just like a true NvChad user.
 
 # Plugins
 - [Autosave](https://github.com/okuuva/auto-save.nvim)
