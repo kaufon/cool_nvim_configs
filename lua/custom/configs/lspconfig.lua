@@ -10,14 +10,16 @@ local servers = {
   "solargraph",
   "lua_ls",
   "html",
+  "jsonls",
+  "yamlls",
   "dockerls",
   "tailwindcss",
   "solang",
+  "solidity",
   "tsserver",
   "eslint",
   "ruby_lsp",
   --"solang-llvm"
-  --"htmx" is a work in progress to see progress go to: https://github.com/ThePrimeagen/htmx-lsp  | maybe in near future will work!
 
 }
 for _, server_name in ipairs(servers) do    
