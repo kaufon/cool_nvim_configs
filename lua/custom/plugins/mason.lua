@@ -20,6 +20,8 @@ local mason =
       "pylint",
       "black",
       "solhint",
+      "solargraph",
+      "ruby-lsp"
     }
   }
 }
