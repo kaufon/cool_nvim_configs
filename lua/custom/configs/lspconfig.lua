@@ -1,9 +1,15 @@
-local base = require("plugins.configs.lspconfig")
-local on_attach = base.on_attach 
-local capabilities = base.capabilities
-local lspconfig = require("lspconfig")
-
-local servers = {
+local base = require("plugins.configs.lspconfig")
+
+local on_attach = base.on_attach
+
+local capabilities = base.capabilities
+
+local lspconfig = require("lspconfig")
+
+
+
+local servers = {
+
   -- lsp server name goes here,for consult go to: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc%2Fserver-mapping.md
   "clangd",
   "pyright",
@@ -22,11 +28,11 @@ local servers = {
   --"solang-llvm"
 
 }
-for _, server_name in ipairs(servers) do    
+for _, server_name in ipairs(servers) do
   lspconfig[server_name].setup({
-    on_attach = function (client,bufnr)
+    on_attach = function(client, bufnr)
       client.server_capabilities.signatureHelpProvider = false
-      on_attach(client,bufnr)
+      on_attach(client, bufnr)
     end,
     capabilities = capabilities
   })
