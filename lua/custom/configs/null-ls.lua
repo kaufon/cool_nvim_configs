@@ -9,6 +9,7 @@ local opts = {
     null_ls.builtins.diagnostics.solhint,
     null_ls.builtins.diagnostics.rubocop,
     null_ls.builtins.formatting.rubocop,
+    null_ls.builtins.formatting.erb_lint,
   },
 
   --on_attach = function (client,bufnr)
