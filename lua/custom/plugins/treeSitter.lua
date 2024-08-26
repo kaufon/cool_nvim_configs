@@ -12,6 +12,11 @@ local treeSitter =
       "embedded_template",
       "sql",
       "python",
+      "c",
+      "cpp",
+      "css",
+      "html",
+      "json",
     }
     return opts
   end
