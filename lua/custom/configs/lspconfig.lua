@@ -13,7 +13,7 @@ local servers = {
   -- lsp server name goes here,for consult go to: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc%2Fserver-mapping.md
   "clangd",
   "pyright",
-  "solargraph",
+  -- "solargraph",
   "lua_ls",
   "html",
   "jsonls",
