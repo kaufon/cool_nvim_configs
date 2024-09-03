@@ -20,7 +20,9 @@ local mason =
       "black",
       "solhint",
       "solargraph",
-      "ruby-lsp"
+      "ruby-lsp",
+      "sqlls",
+
     }
   }
 }

@@ -25,6 +25,8 @@ local servers = {
   "tsserver",
   "eslint",
   "ruby_lsp",
+  "sqlls",
+
   --"solang-llvm"
 
 }
@@ -37,3 +39,9 @@ for _, server_name in ipairs(servers) do
     capabilities = capabilities
   })
 end
+lspconfig.sqlls.setup{
+  capabilities=capabilities,
+  root_dir = function(_)
+    return vim.loop.cwd()
+  end,
+}
