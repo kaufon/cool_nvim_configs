@@ -22,6 +22,8 @@ local mason =
       "solargraph",
       "ruby-lsp",
       "sqlls",
+      "biome",
+      "python-lsp-server"
 
     }
   }
