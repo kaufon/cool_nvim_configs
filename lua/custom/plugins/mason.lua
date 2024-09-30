@@ -14,7 +14,6 @@ local mason =
       "tailwindcss-language-server",
       "solang",
       "typescript-language-server",
-      "eslint-lsp",
       "prettierd",
       "solhint",
       "solargraph",
