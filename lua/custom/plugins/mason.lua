@@ -16,14 +16,13 @@ local mason =
       "typescript-language-server",
       "eslint-lsp",
       "prettierd",
-      "pylint",
-      "black",
       "solhint",
       "solargraph",
       "ruby-lsp",
       "sqlls",
       "biome",
-      "python-lsp-server"
+      "python-lsp-server",
+      "gopls"
 
     }
   }
