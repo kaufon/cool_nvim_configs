@@ -10,7 +10,7 @@ local options = {
     root_folder_label = false,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 
 }
