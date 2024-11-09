@@ -21,7 +21,8 @@ local mason =
       "sqlls",
       "biome",
       "python-lsp-server",
-      "gopls"
+      "gopls",
+      "prisma-language-server"
 
     }
   }

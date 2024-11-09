@@ -35,6 +35,7 @@ local servers = {
   "ruby_lsp",
   "sqlls",
   "gopls",
+  "prismals",
 
   --"solang-llvm"
 
