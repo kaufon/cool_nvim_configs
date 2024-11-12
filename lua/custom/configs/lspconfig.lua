@@ -1,5 +1,9 @@
 local base = require("plugins.configs.lspconfig")
 
+local mason_packages = vim.fn.stdpath("data") .. "/mason/packages"
+
+local volar_path = mason_packages .. "/vue-language-server/node_modules/@vue/language-server"
+
 local on_attach = base.on_attach
 
 local capabilities = base.capabilities
@@ -36,8 +40,8 @@ local servers = {
   "sqlls",
   "gopls",
   "prismals",
+  "volar",
 
-  --"solang-llvm"
 
 }
 for _, server_name in ipairs(servers) do
@@ -77,12 +81,54 @@ lspconfig.ts_ls.setup({
   init_options = {
     preferences = {
       disableSuggestions = true,
+    },
+    plugins = {
+      {
+        name = '@vue/typescript-plugin',
+        location = volar_path,
+        languages = { "vue" }
+      },
     }
   },
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
   commands = {
     OrganizeImports = {
       organize_imports,
       description = "Organize Imports",
     },
   }
+})
+lspconfig.volar.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    vue = {
+      hybridMode = false,
+    },
+    typescript = {
+      tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
+    },
+    settings = {
+      typescript = {
+        inlayHints = {
+          enumMemberValues = {
+            enabled = true,
+          },
+          functionLikeReturnTypes = {
+            enabled = true,
+          },
+          propertyDeclarationTypes = {
+            enabled = true,
+          },
+          parameterTypes = {
+            enabled = true,
+            suppressWhenArgumentMatchesName = true,
+          },
+          variableTypes = {
+            enabled = true,
+          },
+        }
+      }
+    }
+  },
 })

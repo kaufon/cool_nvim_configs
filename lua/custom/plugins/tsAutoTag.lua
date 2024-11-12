@@ -11,6 +11,7 @@ local tsAutoTag =
     "erb",
     "eruby",
     "embedded_template",
+    "vue",
   },
   config = function()
     require("nvim-ts-autotag").setup()
