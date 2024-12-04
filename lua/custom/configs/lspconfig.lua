@@ -9,6 +9,7 @@ local on_attach = base.on_attach
 local capabilities = base.capabilities
 local util = require "lspconfig/util"
 
+
 local lspconfig = require("lspconfig")
 
 local function organize_imports()
@@ -23,10 +24,10 @@ end
 
 local servers = {
 
-  -- lsp server name goes here,for consult go to: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc%2Fserver-mapping.md
   "clangd",
   "pylsp",
-  -- "solargraph",
+  "solargraph",
+  "ruby_lsp",
   "lua_ls",
   "html",
   "jsonls",
@@ -36,7 +37,6 @@ local servers = {
   "solang",
   "solidity",
   "ts_ls",
-  "ruby_lsp",
   "sqlls",
   "gopls",
   "prismals",
@@ -53,6 +53,18 @@ for _, server_name in ipairs(servers) do
     capabilities = capabilities
   })
 end
+lspconfig.solargraph.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    solargraph = {
+      diagnostics = true, -- Enable diagnostics
+      completion = true,  -- Enable completion
+      folding = true,
+      references = true,
+    }
+  },
+})
 lspconfig.sqlls.setup {
   capabilities = capabilities,
   root_dir = function(_)

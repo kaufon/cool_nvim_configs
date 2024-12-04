@@ -5,8 +5,7 @@ local opts = {
   sources = {
     null_ls.builtins.formatting.biome,
     null_ls.builtins.diagnostics.solhint,
-    null_ls.builtins.diagnostics.rubocop,
-    null_ls.builtins.formatting.rubocop,
+    null_ls.builtins.formatting.rubyfmt,
     null_ls.builtins.formatting.erb_lint,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.gofumpt,
