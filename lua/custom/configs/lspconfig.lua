@@ -62,6 +62,8 @@ lspconfig.solargraph.setup({
       completion = true,  -- Enable completion
       folding = true,
       references = true,
+      rename = true,
+      symbols = true
     }
   },
 })

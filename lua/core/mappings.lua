@@ -16,6 +16,17 @@ M.general = {
   },
 
   n = {
+      -- neotest keybindings
+    ["<Leader>tr"] = { "<cmd>lua require('neotest').run.run()<CR>", "Run nearest test" },
+    ["<Leader>ts"] = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop test run" },
+    ["<Leader>to"] = { "<cmd>lua require('neotest').output.open()<CR>", "Open test output" },
+    ["<Leader>tO"] = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Open test output and enter" },
+    ["<Leader>ti"] = { "<cmd>lua require('neotest').summary.toggle()<CR>", "Toggle test summary" },
+    ["<Leader>tf"] = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run tests in current file" },
+    ["[n"] = { "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<CR>", "Jump to previous failed test" },
+    ["]n"] = { "<cmd>lua require('neotest').jump.next({ status = 'failed' })<CR>", "Jump to next failed test" },
+
+    --- clear highlights
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
@@ -290,7 +301,6 @@ M.telescope = {
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
   },
 }
-
 M.nvterm = {
   plugin = true,
 
