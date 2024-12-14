@@ -16,7 +16,7 @@ M.general = {
   },
 
   n = {
-      -- neotest keybindings
+    -- neotest keybindings
     ["<Leader>tr"] = { "<cmd>lua require('neotest').run.run()<CR>", "Run nearest test" },
     ["<Leader>ts"] = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop test run" },
     ["<Leader>to"] = { "<cmd>lua require('neotest').output.open()<CR>", "Open test output" },

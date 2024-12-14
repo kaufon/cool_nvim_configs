@@ -58,8 +58,8 @@ lspconfig.solargraph.setup({
   capabilities = capabilities,
   settings = {
     solargraph = {
-      diagnostics = true, -- Enable diagnostics
-      completion = true,  -- Enable completion
+      diagnostics = true, 
+      completion = true,  
       folding = true,
       references = true,
       rename = true,
