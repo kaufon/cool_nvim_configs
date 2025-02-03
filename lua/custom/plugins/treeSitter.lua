@@ -22,6 +22,8 @@ local treeSitter =
       "css",
       "html",
       "json",
+      "java",
+      "groovy",
     }
   end
 }

@@ -41,25 +41,24 @@ local servers = {
   "gopls",
   "prismals",
   "volar",
-
-
+  
 }
 for _, server_name in ipairs(servers) do
-  lspconfig[server_name].setup({
-    on_attach = function(client, bufnr)
-      client.server_capabilities.signatureHelpProvider = false
-      on_attach(client, bufnr)
-    end,
-    capabilities = capabilities
-  })
+    lspconfig[server_name].setup({
+      on_attach = function(client, bufnr)
+        client.server_capabilities.signatureHelpProvider = false
+        on_attach(client, bufnr)
+      end,
+      capabilities = capabilities
+    })
 end
 lspconfig.solargraph.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     solargraph = {
-      diagnostics = true, 
-      completion = true,  
+      diagnostics = true,
+      completion = true,
       folding = true,
       references = true,
       rename = true,
