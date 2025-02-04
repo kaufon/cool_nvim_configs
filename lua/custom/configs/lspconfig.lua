@@ -43,6 +43,8 @@ local servers = {
   "volar",
   
 }
+require('java').setup()
+require('lspconfig').jdtls.setup({})
 for _, server_name in ipairs(servers) do
     lspconfig[server_name].setup({
       on_attach = function(client, bufnr)
