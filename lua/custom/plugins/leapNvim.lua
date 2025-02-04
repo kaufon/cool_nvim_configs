@@ -8,7 +8,7 @@ return {
     vim.keymap.set({ 'x', 'o' }, 'f', '<Plug>(leap-forward)')
     vim.keymap.set({ 'x', 'o' }, 'F', '<Plug>(leap-backward)')
     require('leap').opts.equivalence_classes = { ' \t\r\n', '([{', ')]}', '\'"`' }
-    require('leap.user').set_repeat_keys('<enter>', '<backspace>')
+    require('leap.user').set_repeat_keys('\\', '<backspace>')  -- Added the simple backslash key
   end,
   dependencies = {
     "tpope/vim-repeat"
