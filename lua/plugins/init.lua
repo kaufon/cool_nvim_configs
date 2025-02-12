@@ -214,9 +214,23 @@ local default_plugins = {
       for _, ext in ipairs(opts.extensions_list) do
         telescope.load_extension(ext)
       end
+      require("telescope").load_extension("ui-select")
     end,
   },
 
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    config = function()
+      require("telescope").setup {
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+            }
+          }
+        }
+      }
+    end
+  },
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
