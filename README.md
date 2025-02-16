@@ -1,6 +1,5 @@
 
 # How to Install
-I assume you have a basic understanding of Linux. For this guide, I'll be using Ubuntu.
 
 ## Step 1: Install Dependencies
 First, ensure you have Homebrew installed. If not, follow the instructions on how to install it from [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux).
