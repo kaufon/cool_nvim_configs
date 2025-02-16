@@ -42,16 +42,6 @@ Once you've navigated through the dependency installation process, clone my Neov
 git clone https://github.com/kaufon/cool_nvim_configs.git ~/.config/nvim && nvim
 ```
 > Enjoy !
-# Notice
-This setup is entirely based on [NvChad](https://nvchad.com/), with the primary distinction being the inclusion of my custom plugins.
-
-
-# Plugins
-- [Autosave](https://github.com/okuuva/auto-save.nvim)
-- Custom [LSP](https://github.com/williamboman/mason.nvim) for languages that i use
-> You can remove this in the [lua/custom/plugins.lua](https://github.com/kaufon/personal_nvim_configs/blob/main/lua/custom/plugins.lua) and [lua/custom/configs/lspconfig.lua](https://github.com/kaufon/personal_nvim_configs/blob/main/lua/custom/configs/lspconfig.lua) for LSP you do not want to use!
-- [Hardtime](https://github.com/m4xshen/hardtime.nvim)
-- [Precognition](https://github.com/tris203/precognition.nvim)
 
 # Why use NeoVim
 If you truly want to become a developer and escape the chains of the Soy based VSCode that the Microsoft heretics have been meddling in their basement together with the original sin,you will need a true IDE.So join now the NVIM cult to relish all the goods in the world and scare away the bugs
