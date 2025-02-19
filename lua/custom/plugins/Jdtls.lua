@@ -8,6 +8,7 @@ return {
     "MunifTanjim/nui.nvim",
     "neovim/nvim-lspconfig",
     "mfussenegger/nvim-dap",
+    "ibhagwan/fzf-lua", -- optional
     {
       "williamboman/mason.nvim",
       opts = {
@@ -37,6 +38,7 @@ return {
     vim.keymap.set('n', '<leader>sd', vim.diagnostic.open_float, { desc = 'Show Diagnostics' })
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Previous Diagnostic' })
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next Diagnostic' })
+    vim.keymap.set('n', '<leader>fs', ":FzfLua lsp_workspace_symbols<CR>", { desc = 'Find beans' })
 
     vim.api.nvim_set_keymap('n', '<leader>crc', ':JavaRefactorExtractConstant<CR>', { desc = "Extract Constant" })
     vim.api.nvim_set_keymap('n', '<leader>crv', ':JavaRefactorExtractVariable<CR>', { desc = "Extract Variable" })
