@@ -1,0 +1,15 @@
+gui:
+  showIcons: true
+  showFileTree: false
+  theme:
+    selectedLineBgColor:
+      - reverse
+
+keybinding:
+  files:
+    toggleTreeView: 't'
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
